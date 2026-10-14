@@ -29,15 +29,6 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
 app = FastAPI(title="Auth & RBAC Simulation")
 
-from fastapi.middleware.cors import CORSMiddleware
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],   
-    allow_methods=["*"],
-    allow_headers=["*"],      
-)
-
 test_users_db = {
     "student_user": {
         "username": "student_user",
